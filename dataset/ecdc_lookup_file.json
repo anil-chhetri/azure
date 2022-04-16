@@ -1,0 +1,33 @@
+{
+	"name": "ecdc_lookup_file",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "lookupfile.json",
+				"container": "lookupfile"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"baseURL": {
+					"type": "string"
+				},
+				"Http_source_relativeURL": {
+					"type": "string"
+				},
+				"Sink_filename_ecdc": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
